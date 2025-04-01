@@ -13,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     dateInput.max = maxDate;
 });
 
+// Function to format date as DD/MM/YYYY
+function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
 function calculatePregnancy() {
     const lastPeriodDate = new Date(document.getElementById('conception-date').value);
     const today = new Date();
@@ -118,7 +126,7 @@ function calculatePregnancy() {
 
     // Display results
     document.getElementById('results').style.display = 'block';
-    document.getElementById('due-date').textContent = dueDate.toLocaleDateString();
+    document.getElementById('due-date').textContent = formatDate(dueDate);
     document.getElementById('current-week').textContent = `${weeksPregnant} weeks`;
     document.getElementById('weeks-remaining').textContent = `${weeksRemaining} weeks`;
     document.getElementById('fetal-size').textContent = currentSize;
