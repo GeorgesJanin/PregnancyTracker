@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pregnancy Tracker</h1>
+        <div class="input-group">
+            <label for="conception-date">First Day of Last Period 🍆</label>
+            <input type="date" id="conception-date" min="" max="">
+        </div>
+        <button onclick="calculatePregnancy()">Calculate</button>
+        <div class="results" id="results">
+            <div class="result-item">
+                <h3>Due Date</h3>
+                <p id="due-date">-</p>
+            </div>
+            <div class="result-item">
+                <h3>Current Week</h3>
+                <p id="current-week">-</p>
+            </div>
+            <div class="result-item">
+                <h3>Weeks Remaining</h3>
+                <p id="weeks-remaining">-</p>
+            </div>
+            <div class="result-item">
+                <h3>Fetal Size</h3>
+                <p id="fetal-size">-</p>
+            </div>
+            <div class="result-item">
+                <h3>Things to Look Out For</h3>
+                <p id="common-issues">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
